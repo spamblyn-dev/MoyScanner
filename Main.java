@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main_Pickle {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         MenuHandler_Pickle menuHandler = new MenuHandler_Pickle(sc);
