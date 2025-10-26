@@ -6,18 +6,30 @@ public class Main_Pickle {
         MenuHandler_Pickle menuHandler = new MenuHandler_Pickle(sc);
 
         boolean running = true;
+        
 
         while (running) {
-            System.out.println("===================================");
-            System.out.println("   Welcome to Network Scanner");
-            System.out.println("===================================");
-            System.out.println("1. Scan local subnet");
-            System.out.println("2. Scan whole local network");
-            System.out.println("3. Ping device on the network");
-            System.out.println("4. Port scanning");
-            System.out.println("5. Safe mode");
-            System.out.println("6. Exit");
-            System.out.print("Enter your choice: ");
+        System.out.println("\n /$$$$$$$  /$$$$$$  /$$$$$$  /$$   /$$ /$$       /$$$$$$$$");
+        System.out.println("| $$__  $$|_  $$_/ /$$__  $$| $$  /$$/| $$      | $$_____/");
+        System.out.println("| $$  \\ $$  | $$  | $$  \\__/| $$ /$$/ | $$      | $$      ");
+        System.out.println("| $$$$$$$/  | $$  | $$      | $$$$$/  | $$      | $$$$$   ");
+        System.out.println("| $$____/   | $$  | $$      | $$  $$  | $$      | $$__/   ");
+        System.out.println("| $$        | $$  | $$    $$| $$\\  $$ | $$      | $$      ");
+        System.out.println("| $$       /$$$$$$|  $$$$$$/| $$ \\  $$| $$$$$$$$| $$$$$$$$");
+        System.out.println("|__/      |______/ \\______/ |__/  \\__/|________/|________/");
+        System.out.println("                                                          ");
+        System.out.println("                                                          ");
+        System.out.println("                                                          ");
+            System.out.println("\t===================================");
+            System.out.println(" \t  Welcome to Network Scanner");
+            System.out.println("\t===================================");
+            System.out.println("\t1. Scan local subnet");
+            System.out.println("\t2. Scan whole local network");
+            System.out.println("\t3. Ping device on the network");
+            System.out.println("\t4. Port scanning");
+            System.out.println("\t5. Safe mode");
+            System.out.println("\t6. Exit");
+            System.out.print("\tEnter your choice: ");
 
             String choice = sc.nextLine();
 
@@ -54,6 +66,8 @@ public class Main_Pickle {
                     System.out.println("Invalid option, try again.");
             }
         }
+
         sc.close();
     }
+    
 }

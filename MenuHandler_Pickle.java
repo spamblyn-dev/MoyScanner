@@ -11,13 +11,13 @@ public class MenuHandler_Pickle {
     public void localSubnetMenu() {
         boolean back = false;
         while (!back) {
-            System.out.println("----- Local Subnet Menu -----");
-            System.out.println("1. Identify devices");
-            System.out.println("2. Separate devices by type");
-            System.out.println("3. Locate all printers");
-            System.out.println("4. Name all printers by name");
-            System.out.println("5. Return to Main Menu");
-            System.out.print("Enter choice: ");
+            System.out.println("\t----- Local Subnet Menu -----");
+            System.out.println("\t1. Identify devices");
+            System.out.println("\t2. Separate devices by type");
+            System.out.println("\t3. Locate all printers");
+            System.out.println("\t4. Name all printers by name");
+            System.out.println("\t5. Return to Main Menu");
+            System.out.print("\tEnter choice: ");
             String choice = sc.nextLine();
 
             switch (choice) {
@@ -46,11 +46,11 @@ public class MenuHandler_Pickle {
     public void wholeNetworkMenu() {
         boolean back = false;
         while (!back) {
-            System.out.println("----- Whole Network Menu -----");
-            System.out.println("1. Generate report");
-            System.out.println("2. Show active and non-active devices");
-            System.out.println("3. Return to Main Menu");
-            System.out.print("Enter choice: ");
+            System.out.println("\t----- Whole Network Menu -----");
+            System.out.println("\t1. Generate report");
+            System.out.println("\t2. Show active and non-active devices");
+            System.out.println("\t3. Return to Main Menu");
+            System.out.print("\tEnter choice: ");
             String choice = sc.nextLine();
 
             switch (choice) {
@@ -64,7 +64,7 @@ public class MenuHandler_Pickle {
                     back = true;
                     break;
                 default:
-                    System.out.println("Invalid option.");
+                    System.out.println("\tInvalid option.");
             }
         }
     }
@@ -73,25 +73,25 @@ public class MenuHandler_Pickle {
     private void reportMenu() {
         boolean back = false;
         while (!back) {
-            System.out.println("----- Generate Report Menu -----");
-            System.out.println("1. Export report as LocalNetwork.TXT");
-            System.out.println("2. Export report as LocalNetwork.CSV");
-            System.out.println("3. Return to Whole Network Menu");
-            System.out.print("Enter choice: ");
+            System.out.println("\t----- Generate Report Menu -----");
+            System.out.println("\t1. Export report as LocalNetwork.TXT");
+            System.out.println("\t2. Export report as LocalNetwork.CSV");
+            System.out.println("\t3. Return to Whole Network Menu");
+            System.out.print("\tEnter choice: ");
             String choice = sc.nextLine();
 
             switch (choice) {
                 case "1":
-                    ReportGenerator_Pickle.exportReport("txt");
+                    ReportGenerator_Pickle.exportReport("txt", ScannerUtils_Pickle.getDevices());
                     break;
                 case "2":
-                    ReportGenerator_Pickle.exportReport("csv");
+                    ReportGenerator_Pickle.exportReport("csv", ScannerUtils_Pickle.getDevices());
                     break;
                 case "3":
                     back = true;
                     break;
                 default:
-                    System.out.println("Invalid option.");
+                    System.out.println("\tInvalid option.");
             }
         }
     }
