@@ -47,20 +47,49 @@ public class MenuHandler_Pickle {
         boolean back = false;
         while (!back) {
             System.out.println("\t----- Whole Network Menu -----");
-            System.out.println("\t1. Generate report");
-            System.out.println("\t2. Show active and non-active devices");
-            System.out.println("\t3. Return to Main Menu");
+            System.out.println("\t1. Scan entire network now");
+            System.out.println("\t2. Generate report");
+            System.out.println("\t3. Show active and non-active devices");
+            System.out.println("\t4. Return to Main Menu");
             System.out.print("\tEnter choice: ");
             String choice = sc.nextLine();
 
             switch (choice) {
                 case "1":
-                    reportMenu();
+                    scanEntireNetworkMenu();
                     break;
                 case "2":
-                    ScannerUtils_Pickle.showActiveDevices();
+                    reportMenu();
                     break;
                 case "3":
+                    ScannerUtils_Pickle.showActiveDevices();
+                    break;
+                case "4":
+                    back = true;
+                    break;
+                default:
+                    System.out.println("\tInvalid option.");
+            }
+        }
+    }
+
+    // New submenu for full network scan
+    private void scanEntireNetworkMenu() {
+        boolean back = false;
+        while (!back) {
+            System.out.println("\t----- Scan Entire Network Menu -----");
+            System.out.println("\t1. Start full network scan");
+            System.out.println("\t2. Return to Whole Network Menu");
+            System.out.print("\tEnter choice: ");
+            String choice = sc.nextLine();
+
+            switch (choice) {
+                case "1":
+                    System.out.println("Scanning all local subnets...");
+                    System.out.println("Vendors are being checked with resource file.");
+                    ScannerUtils_Pickle.identifyWholeNetwork(); // performs full network scan
+                    break;
+                case "2":
                     back = true;
                     break;
                 default:

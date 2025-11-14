@@ -1,0 +1,30 @@
+00:1A:2B,Microsoft,Windows
+00:1C:B3,Apple,macOS
+00:1E:68,Samsung,Android
+00:24:7E,Google,Android
+00:25:00,Apple,iOS
+00:19:7D,Dell,Windows
+00:80:41,Lenovo,Windows
+3C:5A:B4,Apple,macOS/iPhone/iPad
+60:F8:1D,Apple,macOS/iPhone/iPad
+F4:5C:89,Apple,macOS/iPhone/iPad
+A4:83:E7,Apple,macOS/iPhone/iPad
+00:1A:2B,Intel,Windows PC
+00:0C:29,VMware,Virtual Machine
+3C:97:0E,Dell,Windows PC
+F0:79:59,HP,Windows PC
+2C:6E:85,Lenovo,Windows PC
+FC:3F:DB,ASUS,Windows PC
+B8:27:EB,Raspberry Pi,Embedded/Linux Device
+D8:50:E6,Microsoft,Windows PC
+14:AB:C5,Acer,Windows PC
+E0:06:E6,MSI,Windows PC
+00:25:9C,Samsung,Android
+F8:27:93,Samsung,Android
+34:14:5F,Samsung,Android
+60:21:C0,Samsung,Android
+48:5A:3F,OnePlus,Android
+00:0A:F5,LG,Android
+C8:3A:35,Huawei,Android
+20:47:DA,Xiaomi,Android
+FA:FB:52,LOCAL

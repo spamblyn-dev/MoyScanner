@@ -2,7 +2,6 @@ import java.io.*;
 import java.util.regex.*;
 
 public class ArpUtil_Pickle {
-    // Returns MAC in format "00:11:22:33:44:55" or null
     public static String getMacForIp(String ip) {
         try {
             ProcessBuilder pb = new ProcessBuilder("arp", "-a");
@@ -18,19 +17,13 @@ public class ArpUtil_Pickle {
                 }
             }
             p.waitFor();
-        } catch (Exception e) {
-            // ignore, return null if any error occurs
-        }
+        } catch (Exception e) { }
         return null;
     }
 
     private static String extractMac(String line) {
-        // simple regex to find mac (00:11:22:33:44:55 or 00-11-22-33-44-55)
         Matcher m = Pattern.compile("([0-9a-fA-F]{2}[:\\-]){5}[0-9a-fA-F]{2}").matcher(line);
-        if (m.find()) {
-            return m.group().replace('-', ':');
-        }
-        // optional: match dot format 0011.2233.4455
+        if (m.find()) return m.group().replace('-', ':');
         Matcher m2 = Pattern.compile("([0-9A-Fa-f]{4}\\.){2}[0-9A-Fa-f]{4}").matcher(line);
         if (m2.find()) {
             String s = m2.group().replace(".", "");
